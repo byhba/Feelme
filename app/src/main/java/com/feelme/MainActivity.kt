@@ -19,9 +19,37 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val preference = findViewById(R.id.preference) as Button
+        val conversation = findViewById(R.id.conversation) as Button
+        val user = findViewById(R.id.user) as Button
+        val lang = findViewById(R.id.lang) as Button
+        val params = findViewById(R.id.params) as Button
 
         preference.setOnClickListener {
             val intent = Intent(this, PreferenceActivity::class.java)
+            startActivity(intent);
+//            Toast.makeText(this@MainActivity, "You clicked on preference.", Toast.LENGTH_SHORT).show()
+
+        }
+        conversation.setOnClickListener {
+            val intent = Intent(this, ConversationActivity::class.java)
+            startActivity(intent);
+//            Toast.makeText(this@MainActivity, "You clicked on preference.", Toast.LENGTH_SHORT).show()
+
+        }
+        params.setOnClickListener {
+            val intent = Intent(this, ParamsActivity::class.java)
+            startActivity(intent);
+//            Toast.makeText(this@MainActivity, "You clicked on preference.", Toast.LENGTH_SHORT).show()
+
+        }
+        lang.setOnClickListener {
+            val intent = Intent(this, ConversationActivity::class.java)
+            startActivity(intent);
+//            Toast.makeText(this@MainActivity, "You clicked on preference.", Toast.LENGTH_SHORT).show()
+
+        }
+        user.setOnClickListener {
+            val intent = Intent(this, UserActivity::class.java)
             startActivity(intent);
 //            Toast.makeText(this@MainActivity, "You clicked on preference.", Toast.LENGTH_SHORT).show()
 

@@ -15,9 +15,7 @@ class PreferenceActivity : AppCompatActivity() {
     lateinit var pref4 : Spinner
     lateinit var pref5 : Spinner
     lateinit var pref6 : Spinner
-    lateinit var sex : Spinner
     lateinit var spinresult: TextView
-    lateinit var name: EditText
 
 
 
@@ -25,8 +23,6 @@ class PreferenceActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_preference)
 
-        name = findViewById(R.id.name) as EditText
-        sex = findViewById(R.id.sex) as Spinner
         pref1 = findViewById(R.id.pref1) as Spinner
         pref2 = findViewById(R.id.pref2) as Spinner
         pref3 = findViewById(R.id.pref3) as Spinner
@@ -44,7 +40,7 @@ class PreferenceActivity : AppCompatActivity() {
         val listPref4 = arrayOf("Mental","Playing game","Reading")
         val listPref5 = arrayOf("Old","None if you are not old","listen to music","reading","walking")
         val listPref6 = arrayOf("At work","Take a break","Drink water","Drink coffee")
-        val listSex = arrayOf("Sex","Male","Female")
+
 
 
         pref1.adapter = ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, listPref1)
@@ -53,9 +49,6 @@ class PreferenceActivity : AppCompatActivity() {
         pref4.adapter = ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, listPref4)
         pref5.adapter = ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, listPref5)
         pref6.adapter = ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, listPref6)
-
-        sex.adapter = ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, listSex)
-
 
 
         pref1.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
@@ -124,16 +117,6 @@ class PreferenceActivity : AppCompatActivity() {
             }
         }
 
-        sex.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
-            var ssex = ""
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-                spinresult.text = ""
-            }
-            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                spinresult.text = listSex.get(position)
-                ssex = listSex.get(position)
-            }
-        }
 
         cancelPref.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
@@ -152,18 +135,11 @@ class PreferenceActivity : AppCompatActivity() {
 
         //saving data
         fun saveData(view: View) {
-            val aff = name.text.toString()
-            Toast.makeText(this, "$aff", Toast.LENGTH_LONG).show()
+            // val aff = name.text.toString()
+            // Toast.makeText(this, "$aff", Toast.LENGTH_LONG).show()
             val sharedPref = this.getPreferences(Context.MODE_PRIVATE) ?: return
             with(sharedPref.edit()) {
-                putString("name", name.text.toString())
-//                putString("sex", ssex.toString())
-//                putString("pref1", spref1.toString())
-//                putString("pref2", name.text.toString())
-//                putString("pref3", name.text.toString())
-//                putString("pref4", name.text.toString())
-//                putString("pref5", name.text.toString())
-//                putString("pref6", name.text.toString())
+                // putString("name", name.text.toString())
                 commit()
             }
         }
