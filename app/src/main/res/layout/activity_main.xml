@@ -2,72 +2,33 @@
 <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@color/whitebg"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:context=".MainActivity">
-    <!--<include-->
-        <!--layout="@layout/toolbar"-->
-        <!--android:id="@+id/toolbar"-->
-    <!--/>-->
-    <LinearLayout
-            android:layout_width="match_parent"
+    <android.support.v7.widget.Toolbar
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@color/colorPrimaryDark"
-    >
-
-        <ImageView
-                android:layout_width="96dp"
-                android:layout_height="48dp"
-                android:src="@drawable/logo"
-                android:layout_gravity="center_horizontal"
-        />
-
-    </LinearLayout>
-
-    <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-    >
-        <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/preference"
-                android:text="Preference"
+            android:background="@color/colorPrimary"
+            android:id="@+id/toolbar"
         />
-        <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/conversation"
-                android:text="Test my stress level"
-        />
-        <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/lang"
-                android:text="Lang"
-        />
-        <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/user"
-                android:text="User"
-        />
-        <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/params"
-                android:text="Params"
-        />
-    </LinearLayout>
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:id="@+id/constraintLayout"
+                android:layout_gravity="center"
+        >
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Welcome home!"
-        android:gravity="center_vertical"
-    />
+            <ImageButton
+                    android:layout_width="256dp"
+                    android:layout_height="256dp"
+                    android:src="@drawable/iconstart"
+                    android:layout_gravity="center"
+                    android:id="@+id/startFeel"
+                    android:background="@color/whitebg"
+            />
+
+        </LinearLayout>
 </LinearLayout>

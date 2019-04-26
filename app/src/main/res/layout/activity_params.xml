@@ -8,8 +8,12 @@
         android:orientation="vertical"
         android:weightSum="4"
         tools:context=".ParamsActivity">
-
-
+    <android.support.v7.widget.Toolbar
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:background="@color/colorPrimary"
+            android:id="@+id/toolbar"
+    />
     <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -63,7 +67,7 @@
                     <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Reglage"
+                            android:text="Preferences"
                             android:textSize="20dp"
                             android:layout_centerInParent="true"
                     />
