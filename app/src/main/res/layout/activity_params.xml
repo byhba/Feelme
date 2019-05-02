@@ -24,7 +24,7 @@
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Parametres"
+                android:text="@string/label_params"
                 android:textSize="20dp"
                 android:layout_centerInParent="true"
         />
@@ -67,7 +67,7 @@
                     <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Preferences"
+                            android:text="@string/btn_preference"
                             android:textSize="20dp"
                             android:layout_centerInParent="true"
                     />
@@ -101,7 +101,7 @@
                     <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Utilisateur"
+                            android:text="@string/btn_user"
                             android:textSize="20dp"
                             android:layout_centerInParent="true"
                             android:id="@+id/user"
@@ -136,7 +136,7 @@
                     <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Notifications"
+                            android:text="@string/btn_user"
                             android:textSize="20dp"
                             android:layout_centerInParent="true"
                     />
@@ -170,7 +170,7 @@
                     <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="FeelMe"
+                            android:text="@string/btn_feelMe"
                             android:textSize="20dp"
                             android:layout_centerInParent="true"
                     />

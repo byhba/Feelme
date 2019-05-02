@@ -13,48 +13,69 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import com.pusher.client.Pusher;
-import com.pusher.client.channel.Channel;
-import com.pusher.client.channel.SubscriptionEventListener;
-import com.pusher.client.PusherOptions
+//import com.pusher.client.Pusher;
+//import com.pusher.client.channel.Channel;
+//import com.pusher.client.channel.SubscriptionEventListener;
+//import com.pusher.client.PusherOptions
+import ai.api.android.AIConfiguration
+import ai.api.AIDataService
+import ai.api.AIServiceContextBuilder
+import ai.api.android.AIService
+import ai.api.model.AIRequest
+
+
 import kotlinx.android.synthetic.main.activity_conversation.*
 
 
+
 class ConversationActivity : AppCompatActivity() {
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_conversation)
 
         val btnSend = findViewById(R.id.btnSend) as Button
+        val btnSpeak = findViewById(R.id.btnSpeak) as Button
         val txtMessage = findViewById(R.id.txtMessage) as EditText
         val message = txtMessage.text.toString()
+        val REQUEST_INTERNET: Int = 200
+        val aiService: AIService
+        val config: AIConfiguration = AIConfiguration("055722382ba048799a104a3cf2d2137c",
+            ai.api.AIConfiguration.SupportedLanguages.fromLanguageTag("ENGLISH"),
+            AIConfiguration.RecognitionEngine.System)
+        aiService = AIService.getService(this,config)
+//        aiService.setListener()
 
-        val options = PusherOptions()
-        options.setCluster("eu")
-        val pusher = Pusher("28b88b9f769727f3bf35", options)
 
-        val channel = pusher.subscribe("my-channel")
+//        val options = PusherOptions()
+//        options.setCluster("eu")
+//        val pusher = Pusher("28b88b9f769727f3bf35", options)
+
+//        val channel = pusher.subscribe("my-channel")
 
 
         if(isNetworkAvailable()) {
-            Toast.makeText(this,"Connexion available",Toast.LENGTH_LONG).show()
-
-//          Pusher connexion for dialogflow
-            channel.bind(
-                "my-event"
-            ) { channelName, eventName, data -> println(data) }
-            pusher.connect()
-
+            Toast.makeText(this,R.string.message_connexion,Toast.LENGTH_LONG).show()
 //          User interface management
+//            Communication vocale
+            btnSpeak.setOnClickListener(){
+                Toast.makeText(this,R.string.MessageVocalGuide, Context.MODE_PRIVATE).show()
+            }
             btnSend.setOnClickListener(){
                 Toast.makeText(this,txtMessage.text.toString(), Context.MODE_PRIVATE).show()
+//          Pusher connexion for dialogflow
+//                channel.bind(
+//                    "my-event"
+//                ) { channelName, eventName, data -> println(data) }
+//                pusher.connect()
+                txtMessage.setText("")
             }
 
 
 
         } else{
-            Toast.makeText(this, "Pas de connexion internet", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, R.string.message_no_connexion, Toast.LENGTH_LONG).show()
         }
     }
     private fun isNetworkAvailable(): Boolean {
@@ -64,4 +85,5 @@ class ConversationActivity : AppCompatActivity() {
             networkInfo?.isConnected ?: false
         } else false
     }
+
 }

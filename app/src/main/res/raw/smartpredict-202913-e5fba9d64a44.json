@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "smartpredict-202913",
+  "private_key_id": "e5fba9d64a449c1a6aeecc31479e0dee4c4371ff",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCz9Mnsv8Qun3bP\nol8VdNUG71iodNQr8HQkZP2qgDzXAMjJgNhpqMuDoJw2PN54NEq52/AmpQfeNMgS\nZM7NvDVlNIuFYSItFM3jowhGE4nTKkiW0G7/PH/WxepUY/Fn/gCEdDdsfZnuryOS\nfYaK3/HiImOYdSeks1h2YDD2Vbj9UCfKiN46o9q2Gb2s++V6lo04N8UGGQk7QoVW\nTdNL0UW67uccWbDd9BCw1Z1Xqcb3tFD8eE5JijfqKjq2URzlhWOIUKgOZQCZHcDp\nhL8jspFCmHlqMVP7S9cM3kKy5oeDkEum5p/48eCL2Dd2n5RK3JwJgr/pc2w6jsRE\nNx9yFIPNAgMBAAECggEAEFAChN4+RZ6pabl1ho+kZuBH6F9Mw13k3U61SuEcgr3c\ntZ1jILLPHfOvbWA3p2xQEMh93Lbtf2hH8ZjnQTGMIowwkIrlSvJdloK3E4keX4Cv\n+1HSGfttODYRH4y+u5dECz2wr3o0O7VvE06jJVAXEFFfN1j5Wr3yKSrfjVjob7fP\nHW5Voef+WPriyXXz6IITy44ThpXyHxCmI8xmdF8aVCkmEgyHZfBaKb5MNMtqX81w\nflzIEXvJX0WPZYv4NGhuIaHfJuD/QCUJS2zwvf457AbyzsS+v5z5JFrSPNvfwcZm\n+V8QvdZyK7SQ3nHLsL7rTLsIfCSr1L52aj/eOoZ1EQKBgQDmM++ZveI/3KSymJg4\nIlSQJtxrT1mOhE0Z9ytMoud6AgPuO3ox8aewXUdiMW85lbj9LyPGSFNsClW7zccZ\n72JMKV9mFeCQBjlHD6OeTwzLaim7cT1cZbTw8zLpW3Jsjx4wEP8HmHZJQB7khEm/\nmetoF1klkPGKAVknhB3w75V2vQKBgQDIH2Aio4ioiwp2+nWF372CkpBGZAtjW7XG\nMNHeOOSCJE36MeoWhdX53t0UyFNYNVXiNXNd4ae/TLdY7cJPvEpuyp5xm/Lpa3Ym\n225uXf6ZrQBQjVEyRXBtlCvYkEbMtCq2/F2OJYvN2BClrCRKX8t8CGI9At2bRpv1\n0BWKlLHaUQKBgQCSug/CApGu+sfPPgvn25nit6JOk6kVeaZbInvqwPqhfZ9bvXVJ\nWCn1876IC9JE9fWPCvjWbUse1geHSMXa9gXFXal8u/0CT7U6YfF7+g7BqM0ouCjQ\nN9N4sMqGis8H+sDXCj5DbR4X2lLWfKs1ALpXAmrD0vrhZ7KXyVH8O/kcUQKBgGm6\nKdAjFc/1pVG2gOB5lGWniRGnSVz01tQedsIwzIj1JT1JoaLEkoewdpzEOUQg6X7Z\nPlobHcSzgyo4crAtiiV+Zrce7PblD0b4Jx+oCRqni8MC5iLpDLzXy1Je5wi/JtIG\nAmdW7sWRoTnl+EZS1e5xf3U8Tlf6teroRHkylcQBAoGAWI0ScS9oeW89KW3LgpVn\n35IOj+1ypQRauYPD6JLj5rZupYT4fpg07aNPgF9jQ63IBHXI0F+PYA4FQ1SyvGjY\n266ijpovunU+OhbfpRmfxz4GWSvSy0keMVf506Kj6Yg63w69sU7IEfPXLE7v0WsN\nSXqaRrbgwU0Uf0yN3R1oWgs=\n-----END PRIVATE KEY-----\n",
+  "client_email": "feelme@smartpredict-202913.iam.gserviceaccount.com",
+  "client_id": "109661906105542825566",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/feelme%40smartpredict-202913.iam.gserviceaccount.com"
+}

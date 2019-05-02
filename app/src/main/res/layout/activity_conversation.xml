@@ -40,7 +40,7 @@
 
         <EditText
                 android:id="@+id/txtMessage"
-                android:hint="Enter message"
+                android:hint="@string/tapeMessage"
                 android:background="@android:color/transparent"
                 android:layout_gravity="center"
                 android:layout_marginLeft="16dp"
@@ -52,7 +52,16 @@
 
         <Button
                 android:id="@+id/btnSend"
-                android:text="SEND"
+                android:text="@string/btn_send"
+                android:textSize="14dp"
+                android:clickable="true"
+                android:layout_width="64dp"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:layout_gravity="bottom" />
+        <Button
+                android:id="@+id/btnSpeak"
+                android:text="@string/btn_speak"
                 android:textSize="14dp"
                 android:clickable="true"
                 android:layout_width="64dp"

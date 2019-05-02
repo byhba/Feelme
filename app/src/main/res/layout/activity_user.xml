@@ -34,7 +34,7 @@
         <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Information Personnelle"
+                android:text="@string/titlePersonalInfo"
                 android:gravity="center"
                 android:layout_marginBottom="30dp"
                 android:layout_marginTop="30dp"
@@ -49,7 +49,7 @@
             <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Sexe"
+                    android:text="@string/hintUserSex"
             />
             <Spinner
                     android:layout_width="match_parent"
@@ -61,21 +61,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/name"
-                android:hint="Name"
+                android:hint="@string/hintuserName"
                 android:inputType="text"
         />
         <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/age"
-                android:hint="Age"
+                android:hint="@string/hintUserAge"
                 android:inputType="number"
         />
         <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/email"
-                android:hint="Email"
+                android:hint="@string/hintUserEmail"
                 android:inputType="textEmailAddress"
         />
         <LinearLayout
@@ -86,13 +86,13 @@
             <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Save"
+                    android:text="@string/btn_userSave"
                     android:id="@+id/saveInfo"
             />
             <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Cancel"
+                    android:text="@string/btn_preCancel"
                     android:id="@+id/cancelInfo"
             />
         </LinearLayout>
