@@ -32,36 +32,7 @@ import kotlinx.android.synthetic.main.activity_conversation.*
 
 
 
-abstract class ConversationActivity : AppCompatActivity(), AIListener{
-//    override fun onListeningFinished() {
-//        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-//    }
-//
-//    override fun onListeningCanceled() {
-//        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-//    }
-//
-//    override fun onError(error: AIError?) {
-//        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-//    }
-
-//    override fun onResult(response: AIResponse?) {
-//        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-//        val reponse: AIResponse = AIResponse()
-//        val parametres = ""
-//        if(reponse.result.parameters != null && !reponse.result.parameters.isEmpty()){
-////            for(val Map.Entry<String, JsonElement> entry)
-//            Toast.makeText(this,"Resultat",Context.MODE_PRIVATE).show()
-//        }
-//    }
-
-//    override fun onListeningStarted() {
-//        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-//    }
-//
-//    override fun onAudioLevel(level: Float) {
-//        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-//    }
+class ConversationActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -73,10 +44,10 @@ abstract class ConversationActivity : AppCompatActivity(), AIListener{
         val message = txtMessage.text.toString()
         val REQUEST_INTERNET: Int = 200
         val aiService: AIService
-        val config: AIConfiguration = AIConfiguration("055722382ba048799a104a3cf2d2137c",
-            ai.api.AIConfiguration.SupportedLanguages.fromLanguageTag("ENGLISH"),
-            AIConfiguration.RecognitionEngine.System)
-            aiService = AIService.getService(this,config)
+//        val config: AIConfiguration = AIConfiguration("055722382ba048799a104a3cf2d2137c",
+//            ai.api.AIConfiguration.SupportedLanguages.fromLanguageTag("ENGLISH"),
+//            AIConfiguration.RecognitionEngine.System)
+//            aiService = AIService.getService(this,config)
 //            aiService.setListener(this)
 
 
