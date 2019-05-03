@@ -19,17 +19,49 @@ import android.widget.Toast
 //import com.pusher.client.PusherOptions
 import ai.api.android.AIConfiguration
 import ai.api.AIDataService
+import ai.api.AIListener
 import ai.api.AIServiceContextBuilder
 import ai.api.android.AIService
+import ai.api.model.AIError
 import ai.api.model.AIRequest
+import ai.api.model.AIResponse
+import com.google.gson.JsonElement
 
 
 import kotlinx.android.synthetic.main.activity_conversation.*
 
 
 
-class ConversationActivity : AppCompatActivity() {
+abstract class ConversationActivity : AppCompatActivity(), AIListener{
+//    override fun onListeningFinished() {
+//        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+//    }
+//
+//    override fun onListeningCanceled() {
+//        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+//    }
+//
+//    override fun onError(error: AIError?) {
+//        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+//    }
 
+//    override fun onResult(response: AIResponse?) {
+//        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+//        val reponse: AIResponse = AIResponse()
+//        val parametres = ""
+//        if(reponse.result.parameters != null && !reponse.result.parameters.isEmpty()){
+////            for(val Map.Entry<String, JsonElement> entry)
+//            Toast.makeText(this,"Resultat",Context.MODE_PRIVATE).show()
+//        }
+//    }
+
+//    override fun onListeningStarted() {
+//        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+//    }
+//
+//    override fun onAudioLevel(level: Float) {
+//        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+//    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,8 +76,8 @@ class ConversationActivity : AppCompatActivity() {
         val config: AIConfiguration = AIConfiguration("055722382ba048799a104a3cf2d2137c",
             ai.api.AIConfiguration.SupportedLanguages.fromLanguageTag("ENGLISH"),
             AIConfiguration.RecognitionEngine.System)
-        aiService = AIService.getService(this,config)
-//        aiService.setListener()
+            aiService = AIService.getService(this,config)
+//            aiService.setListener(this)
 
 
 //        val options = PusherOptions()
@@ -63,13 +95,16 @@ class ConversationActivity : AppCompatActivity() {
                 Toast.makeText(this,R.string.MessageVocalGuide, Context.MODE_PRIVATE).show()
             }
             btnSend.setOnClickListener(){
-                Toast.makeText(this,txtMessage.text.toString(), Context.MODE_PRIVATE).show()
+                if(!txtMessage.text.isEmpty() && txtMessage.text != null){
+                    Toast.makeText(this,txtMessage.text.toString(), Context.MODE_PRIVATE).show()
 //          Pusher connexion for dialogflow
 //                channel.bind(
 //                    "my-event"
 //                ) { channelName, eventName, data -> println(data) }
 //                pusher.connect()
-                txtMessage.setText("")
+                    txtMessage.setText("")
+                }
+
             }
 
 
